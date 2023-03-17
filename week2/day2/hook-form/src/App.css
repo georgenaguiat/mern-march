@@ -1,10 +1,23 @@
 .App {
   text-align: center;
+  margin: 20px;
+}
+
+.col {
+  margin: 20px;
+  border: 2px solid black;
+  padding: 20px;
+  margin-right: 400px;
+  margin-left: 400px;
+  background-color: lightslategray;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+label {
+  width: 100px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
