@@ -12,7 +12,7 @@ const UserForm = (props) => {
 
     const userHandler = (event) => {
         event.preventDefault();
-        setUserData(prevState => ({ ...prevState, [event.target.name]: event.target.value }))
+        setUserData(preState => ({ ...preState, [event.target.name]: event.target.value }))
     }
 
     return (
