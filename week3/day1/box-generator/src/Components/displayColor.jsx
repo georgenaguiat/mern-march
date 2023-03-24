@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React from "react";
 
 const DisplayColor = (props) => {
     const { colorList, setColorList } = props;
@@ -8,9 +8,9 @@ const DisplayColor = (props) => {
                 colorList.map((color, idx) => (
                     <div key={idx} style={{
                         display: 'inline-block',
+                        width: '150px',
+                        height: '150px',
                         margin: '10px',
-                        height: '50px',
-                        width: '50px',
                         background: color
                     }}></div>
                 ))
