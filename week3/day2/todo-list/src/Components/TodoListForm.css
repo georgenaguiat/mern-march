@@ -1,0 +1,23 @@
+.toDoListBtn {
+    margin-right: 200px;
+    margin-top: 10px;
+    box-shadow: 5px 5px black;
+    width: 150px;
+    height: 50px;
+    font-size: large;
+    font-weight: bolder;
+    background-color: rgb(212, 212, 225);
+}
+
+input {
+    margin-top: 20px;
+    width: 570px;
+    height: 30px;
+}
+
+form {
+    background-color: aqua;
+    border: 2px solid;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}

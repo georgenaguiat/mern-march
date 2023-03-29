@@ -1,0 +1,28 @@
+h3 {
+    display: inline-block;
+    align-content: center;
+    margin-left: 20px;
+    padding-bottom: 10px;
+}
+
+.line-though {
+    text-decoration: line-through;
+}
+
+.deleteBtn {
+    width: 100px;
+    height: 50px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px black;
+}
+
+.list {
+    margin: 20px;
+}
+
+.toDoItemList {
+    border: 2px solid;
+    margin: 10px;
+    background-color: bisque;
+    width: 0 auto;
+}
