@@ -6,7 +6,7 @@ module.exports.findAllProducts = (req, res) => {
             res.json(allProduct);
         })
         .catch(err => {
-            res.json({ message: 'Something went wrong', error: err })
+            res.status(400).json(err)
         });
 }
 
@@ -16,6 +16,6 @@ module.exports.createNewProduct = (req, res) => {
             res.json(newProduct);
         })
         .catch(err => {
-            res.json({ message: 'Something went wrong', error: err })
+            res.status(400).json(err)
         });
 }
