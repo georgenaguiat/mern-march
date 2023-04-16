@@ -32,7 +32,34 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.field {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  color: gray;
+  background-color: lightgray;
+}
+
+.inputBox {
+  width: 195px;
+  height: 25px;
+  margin-left: 20px;
+}
+
+.fieldBox {
+  margin-left: 60px;
+}
+
+.createBtn {
+  width: 125px;
+  height: 30px;
 }
