@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import './Components/ProductForm.css'
 import Main from './view/Main'
 import ProductDetail from './Components/ProductDetail';
 
