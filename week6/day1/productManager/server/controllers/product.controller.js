@@ -23,7 +23,31 @@ module.exports = {
     },
     getProduct: (req, res) => {
         Product.findOne({_id: req.params.id})
-        .then(oneProduct => res.json(oneProduct))
-        .catch(err => res.json(err));
+        .then(oneProduct => {
+            res.json(oneProduct);
+        })
+        .catch(err => {
+            res.status(400).json(err)
+        });
+    },
+
+    updateProduct: (req, res) => {
+        Product.findOneAndUpdate({_id: req.params.id}, req.body, {new:true})
+        .then(updateOneProduct => {
+            res.json(updateOneProduct);
+        })
+        .catch(err => {
+            res.status(400).json(err)
+        });
+    },
+
+    deleteProduct: (req, res) => {
+        Product.deleteOne({_id: req.params.id})
+        .then(deleteOneProduct => {
+            res.json(deleteOneProduct);
+        })
+        .catch(err => {
+            res.status(400).json(err)
+        });
     }
 }

@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 
+
 const ProductList = (props) => {
 
     const { productList, setProductList } = props;
@@ -14,8 +15,17 @@ const ProductList = (props) => {
                 setProductList(res.data);
             }))
             .catch((err) => console.log(err));
-    }, [])
+    }, [setProductList])
 
+    const deleteOneProduct = (productId) => {
+        axios.delete(`http://localhost:8000/api/deleteProduct/${productId}`)
+        .then(res => {
+            console.log(res.data);
+            setProductList(productList.filter((productRemove) => productRemove._id !== productId))
+        })
+        
+        .catch(err => console.log(err));
+    }
 
     return (
         <div>
@@ -23,7 +33,10 @@ const ProductList = (props) => {
             {
                 productList.map((product) => (
                     <div key={product._id}>
-                        <Link to={`/product/${product._id}`}><br/>{product.title}</Link>
+                        <Link className='productTitle' to={`/product/${product._id}`}><br/>{product.title}</Link><br />
+                        <br />
+                        <Link className='editBtn' to={`/product/edit/${product._id}`}>Edit</Link>
+                        <button className='deleteBtn' onClick={() => deleteOneProduct(product._id)}>Delete</button>
                     </div>
                 ))
             }
